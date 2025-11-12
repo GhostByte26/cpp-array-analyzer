@@ -13,7 +13,7 @@ int main()
     // Input container
     int count = 0;
 
-    // Data acquisition and loop
+    // validation loop
     while (true)
     {
 
@@ -21,5 +21,14 @@ int main()
         std::cin >> count;
         // Clears the buffer
         std::cin.ignore();
+
+        if (count > 0 && count <= max_size)
+        {
+            break;
+        }
+        else
+        {
+            std::cout << "Invalid range! Please enter a different amount:\n";
+        }
     }
 }
